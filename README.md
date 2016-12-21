@@ -3,13 +3,48 @@
 Scala Quickbook
 =======
 
-[TOC]
+* [Scala Quickbook](#scala-quickbook)
+      * [What is this about?](#what-is-this-about)
+      * [Pre-requisites](#pre-requisites)
+            * [<strong>Skillset</strong>](#skillset)
+            * [<strong>System Requirements &amp; set-up</strong>](#system-requirements--set-up)
+      * [Trying the samples out](#trying-the-samples-out)
+            * [<strong>Conventions</strong>](#conventions)
+      * [Scala what?](#scala-what)
+      * [Everything is a type](#everything-is-a-type)
+      * [Type Inference](#type-inference)
+      * [The Predef object](#the-predef-object)
+      * [val vs var](#val-vs-var)
+      * [Operator overloading](#operator-overloading)
+      * [Infix notation](#infix-notation)
+      * [Functions vs Methods](#functions-vs-methods)
+      * [Evaluation](#evaluation)
+      * [val vs def](#val-vs-def)
+      * [Scala Strings](#scala-strings)
+      * [Recursion and Tailrecursion](#recursion-and-tailrecursion)
+      * [Higher order function](#higher-order-function)
+            * [<strong>Currying</strong>](#currying)
+      * [Classes and Types](#classes-and-types)
+            * [<strong>Type Hierarchy</strong>](#type-hierarchy)
+            * [<strong>Trait</strong>](#trait)
+            * [<strong>Singleton Objects</strong>](#singleton-objects)
+            * [<strong>Companion Object</strong>](#companion-object)
+            * [<strong>The Function class</strong>](#the-function-class)
+            * [<strong>Persistent datastructure</strong>](#persistent-datastructure)
+            * [<strong>Case classes</strong>](#case-classes)
+            * [<strong>Type Variance</strong>](#type-variance)
+      * [Pattern Matching](#pattern-matching)
+         * [<strong>Collections</strong>](#collections)
+            * [<strong>Sequences</strong>](#sequences)
+            * [<strong>List</strong>](#list)
+            * [Utilities of List](#utilities-of-list)
+            * [<strong>Higher order list functions</strong>](#higher-order-list-functions)
 
 What is this about?
 -------
 This material is consolidated with an intention to provide quick but comprehensive introduction on some of core concepts of the Scala language.
 
-The material draws it's content heavily from the book [Scala for the Impatient Second Edition](https://www.safaribooksonline.com/library/view/scala-for-the/9780134540627/) and an online course from  [coursera.org - ](https://coursera.org) [Functional Programming Principles in Scala](https://www.coursera.org/learn/progfun1)
+The material draws it's content heavily from an online course from  [coursera.org - ](https://coursera.org) [Functional Programming Principles in Scala](https://www.coursera.org/learn/progfun1) and several blogs and tutorials.
  
  
 ## Pre-requisites ##
