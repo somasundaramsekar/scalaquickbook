@@ -23,9 +23,9 @@ Scala Quickbook
       * [Scala Strings](#scala-strings)
       * [Recursion and Tailrecursion](#recursion-and-tailrecursion)
       * [Higher order function](#higher-order-function)
-            * [Currying ](#currying)
+            * [Currying](#currying)
       * [Classes and Types](#classes-and-types)
-            * [ Type Hierarchy ](#type-hierarchy)
+            * [Type Hierarchy](#type-hierarchy)
             * [ Trait ](#trait)
             * [ Singleton Objects ](#singleton-objects)
             * [ Companion Object ](#companion-object)
@@ -49,13 +49,13 @@ The material draws it's content heavily from an online course from  [coursera.or
  
 ## Pre-requisites ##
 
-####**Skillset**
+###**Skillset**
 
  1. Familiarity with Java 5 or later
  2. Basic knowledge on fundamental datastructures & algorithms
  
 
-####**System Requirements & set-up**
+###**System Requirements & set-up**
 
 **Java 8 must be installed!**  
 
@@ -94,7 +94,7 @@ Scala unlike Java comes with a [REPL](https://en.wikipedia.org/wiki/Read%E2%80%9
 
 This should fire up the REPL, it should take sometime though, as it will download all the necessary dependencies.
 
-####**Conventions**
+###**Conventions**
 
 The following conventions will be used through out this 
 
@@ -696,7 +696,7 @@ for multiple arguments braces must be added to the argument and for multi line b
 
 **Note**: **return** statement though available, is not used in scala, the last line of an expression is always the value that is being returned. In the case based on the condition x or y will be returned with out the explicit need for the return statement. Return statement when used will be done so, will be done to break the control flows in iterations.
 
-####**Currying**
+###**Currying**
 A function with multiple parameters that can be applied to wide scenarios based on based on fewer parameters than all can be curried. 
 
 A curried function, returns another function that can be applied to actual arguments when required.
@@ -889,7 +889,7 @@ Let's have a look at the design of a type representation of Rational numbers
 ```
 *Rational.scala*
 
-####**Type Hierarchy**
+###**Type Hierarchy**
 
 ![Scala Type Hierarchy](http://docs.scala-lang.org/resources/images/classhierarchy.img_assist_custom.png)
 
@@ -897,7 +897,7 @@ Just as in Java `java.lang.Object` is supertype of all types. In addition, all t
 
 Then it branches into `AnyVal` and `AnyRef`, AnyVal being super type of all value types like Int, Boolean, Float, Double etc. and AnyRef for all other types. There is however one key difference here, scala has a powerful type variance mechanism and type called `Nothing` which is a subtype of all types of `AnyRef` supports this as we will see later. 
 
-####**Trait**
+###**Trait**
 Trait is similar to Java interfaces but with a twist, trait lets you define concrete methods that can be inherited, and allows classes to extend multiple trait, which is knows as mixin, that you can mixin properties from multiple traits into a concrete type. 
 
 Mixin is resolved using the process of Linearization, explained below ![Type Linearization](http://image.slidesharecdn.com/scala-types-of-types-lambda-days-2014-short-140226180059-phpapp02/95/scala-types-of-types-lambda-days-15-638.jpg?cb=1415031035)
@@ -1034,13 +1034,13 @@ This next example shows that you can add a trait to an instance of a class (an o
       val hulk = new DavidBanner with Angry
     }
 ```
-####**Singleton Objects**
+###**Singleton Objects**
 
 You create singleton using the keyword `object` instead of class keyword. Since you can't instantiate a singleton object, you can't pass parameters to the primary constructor.
 
 All other properties of a class holds true for `object` as well. We have seen plenty of examples of `object` already.
 
-####**Companion Object**
+###**Companion Object**
 
 A companion object is an object with the same name as a class or trait and is defined in the same source file as the associated file or trait. A companion object differs from other objects as it has access rights to the class/trait that other objects do not. In particular it can access methods and fields that are private in the class/trait. 
 
@@ -1068,7 +1068,7 @@ Now that the companion object is defined, we could use them to create an object 
 ```
 As you can see, this looks a lot like a function call. It is because in scala `apply( )`is a method with a special meaning by convention, any type with apply method can be invoked with the syntactic sugar `ObjectName( .. )` or `ObjectName.apply( .. )`.
 
-####**The Function class**
+###**The Function class**
 
 In scala functions are indeed objects, for every lamda expression you define, compiler automatically creates an anonymous instance of class/type `FunctionN` where N -> 1 to 22, yes scala, as of now limits you in defining a function by 22 parameters.
 
@@ -1115,7 +1115,7 @@ Here is a look at how are the function classes defined in scala, in relaity the 
 
 Functions are objects of Function type, but methods are not, if methods were objects of Function, then apply would be an instance of an Function object with an apply method which would be an instanc of an another Function and so on. 
 
-####**Persistent datastructure**
+###**Persistent datastructure**
 
 Persistent datastructure preserves the previous version of the data even when it is modified. 
 
@@ -1179,7 +1179,7 @@ class NonEmpty(elem: Int, left: IntSet, right: IntSet) extends IntSet {
 
 `def contains(x: Int): Boolean` works like a binary search. 
 
-####**Case classes**
+###**Case classes**
 Case classes are special type of classes in scala that comes in very handy while defining Algebric data types in scala. They define the objects of the algebric data types which then requires operations to transform them to another types.
 
 Let us consider a simple case class
@@ -1323,7 +1323,7 @@ That’s because also the equals implementation, you get for free for case class
 In fact, you could define your case class as usual and override equals on your own. However overriding equals is not very trivial. Indeed, before doing that I recommend you read the chapter 30 of Programming in Scala: A Comprehensive Step-by-Step Guide, 2nd Edition - Odersky, Spoon, Venners. Its title is Object Equality and it’s just 25 pages long!
 
 
-####**Type Variance**
+###**Type Variance**
 As stated several times before scala has pretty strong type system, that can radically reduce the errors and help us write code that delegates lot of error checking to the compiler, enabling us to write fewer test to verify behavior. Let us see that with an example
 
 Let us use IntSet to see how type variance works. Let's define a function that check if all the elements of a IntSet is positive.
