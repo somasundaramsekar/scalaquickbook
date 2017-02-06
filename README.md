@@ -89,7 +89,7 @@ The instructions given are for IntelliJ Idea, but Eclipse(scala-ide) should be s
 
 Scala unlike Java comes with a [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop), this makes testing code snippets easier and a lot faster. 
  
-* Clone https://github.com/tigerrepository/Scala_Training
+* Clone https://github.com/somasundaramsekar/scalaquickbook.git
 * run `sbt console` from project home folder (*scala-quick-book/*)
 
 This should fire up the REPL, it should take sometime though, as it will download all the necessary dependencies.
