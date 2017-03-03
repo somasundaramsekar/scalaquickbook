@@ -123,8 +123,6 @@ Scala eco-system has grown considerably over the last couple of years with rich 
 
 This material though, will focus only on the core library of the language *=)*.
 
-![Enough Ceremony](https://cdn.meme.am/cache/instances/folder197/500x/64387197.jpg)
-
 Everything is a type
 --------------------
 Everything in scala is a type, scala does not have a notion of primitives and static, which sets it apart from Java. This fundamental notion is key for making scala fully object-oriented language.
